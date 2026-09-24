@@ -1,4 +1,7 @@
 /* Shared tokens live in styles.css, keeping all surfaces in the same palette. */
+.shared-content { border: 0; padding: 0; margin: 0; min-width: 0; }
+.login-form { max-width: 430px; margin: 24px auto; padding: 24px; display: grid; gap: 14px; text-align: left; }
+.local-backup { margin-top: 24px; font-size: 12px; }
 button { color: inherit; }
 .primary, .brand-icon, .in-cart .check { color: var(--on-accent); }
 dialog { background: var(--surface); }

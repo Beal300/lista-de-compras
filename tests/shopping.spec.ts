@@ -1,7 +1,7 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, login, snapshot } from './fixtures';
 
-test('catálogo completo, seleção, carrinho, persistência e finalização', async ({ page }, testInfo) => {
-  await page.goto('/'); await page.getByRole('button', { name: 'Só catálogo · lista vazia' }).click();
+test('catálogo completo, seleção, carrinho, persistência e finalização', async ({ page, app }, testInfo) => {
+  await login(page, app); await page.getByRole('button', { name: 'Revisar catálogo completo' }).click();
   await expect(page.locator('.product-card')).toHaveCount(92);
   await page.getByRole('checkbox', { name: 'Peito de frango', exact: false }).check();
   await page.getByRole('button', { name: 'Aumentar Peito de frango', exact: true }).click();
@@ -22,13 +22,13 @@ test('catálogo completo, seleção, carrinho, persistência e finalização', a
   await page.getByRole('button', { name: 'Histórico', exact: true }).click();
   await expect(page.locator('.history')).toHaveCount(1); await page.locator('summary').click(); await expect(page.locator('.history-row')).toHaveCount(2);
   await page.getByRole('button', { name: 'Minha compra' }).click(); await page.getByRole('button', { name: 'Finalizar compra' }).click();
-  await page.getByRole('button', { name: 'Começar com uma lista vazia' }).click(); await expect(page.locator('.product-card')).toHaveCount(92);
+  await page.getByRole('button', { name: 'Começar com uma lista vazia' }).click(); await expect(page.locator('.shopping-row')).toHaveCount(0); await page.getByRole('button', { name: 'Revisar catálogo completo' }).click(); await expect(page.locator('.product-card')).toHaveCount(92);
   await page.getByRole('button', { name: 'Voltar à lista' }).click(); await expect(page.locator('.shopping-row')).toHaveCount(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
-test('inicialização preserva CSV e gestão do catálogo persiste', async ({ page }) => {
-  await page.goto('/'); await page.getByRole('button', { name: 'Catálogo + lista da planilha' }).click();
+test('gestão do catálogo persiste no servidor', async ({ page, app }) => {
+  await login(page, app, true);
   await expect(page.locator('.shopping-row.in-cart')).toHaveCount(17);
   await page.getByRole('button', { name: 'Catálogo', exact: true }).click(); await page.getByRole('button', { name: 'Cadastrar produto' }).click();
   await page.getByRole('textbox', { name: 'Nome do produto' }).fill('Produto de teste'); await page.getByRole('combobox', { name: 'Categoria' }).selectOption({ label: 'Limpeza/Higiene' });
@@ -40,8 +40,8 @@ test('inicialização preserva CSV e gestão do catálogo persiste', async ({ pa
   await expect(page.locator('.management-row').filter({ hasText: 'Produto editado' })).toContainText('Arquivado');
 });
 
-test('dados inválidos não são substituídos', async ({ page }) => {
+test('dados inválidos não são substituídos', async ({ page, app }) => {
   await page.addInitScript(() => localStorage.setItem('lista-compras-inteligente', '{corrompido'));
-  await page.goto('/'); await expect(page.getByRole('heading', { name: 'Vamos preservar seus dados' })).toBeVisible();
+  await login(page, app); await expect(page.getByRole('heading', { name: 'Minha compra', exact: true })).toBeVisible();
   expect(await page.evaluate(() => localStorage.getItem('lista-compras-inteligente'))).toBe('{corrompido');
 });
