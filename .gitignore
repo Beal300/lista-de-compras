@@ -8,6 +8,7 @@ playwright-report/
 
 # Original spreadsheet retained only as a local backup
 /produtos.csv
+/README.local.md
 
 # Local credentials and environment configuration
 .env

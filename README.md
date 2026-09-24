@@ -18,13 +18,6 @@ npm run build
 npm run preview
 ```
 
-Neste ambiente, o Node está instalado em `C:\Program Files\nodejs`, mas o terminal inicial não o encontrava no PATH. Se isso ocorrer no PowerShell, abra um novo terminal ou execute:
-
-```powershell
-$env:PATH = 'C:\Program Files\nodejs;' + $env:PATH
-npm.cmd run dev
-```
-
 No primeiro acesso, escolha importar apenas o catálogo (lista vazia) ou também a compra da planilha. O catálogo completo é apresentado para revisão e seleção. Nas visitas seguintes, os dados existentes são carregados sem nova importação.
 
 ## Fluxos
@@ -40,8 +33,6 @@ No primeiro acesso, escolha importar apenas o catálogo (lista vazia) ou também
 ## Acesso pelo celular na rede local
 
 Use no celular o endereço `Network` exibido pelo Vite, na mesma rede do computador. A geração de UUID usa `crypto.randomUUID()` quando disponível e UUID v4 com `crypto.getRandomValues()` nos demais casos, incluindo HTTP de rede local. IDs existentes e o formato dos dados persistidos permanecem inalterados.
-
-Na versão inicial, a criação de dados dependia diretamente de `randomUUID`, ausente em HTTP fora de localhost. Isso causava uma exceção ao escolher uma opção de importação, apresentada incorretamente como erro de quantidade pelo tratamento genérico. O erro foi reproduzido nesse contexto e corrigido na geração de IDs. O carregamento por si só não cria listas nem importa o catálogo; apenas lê e valida dados existentes. Agora erros de quantidade, demais validações e falhas técnicas têm mensagens distintas.
 
 ## Dados iniciais
 
@@ -81,15 +72,7 @@ npm run test:e2e
 
 Testes de domínio e persistência cobrem importação, seleção, adição rápida, quantidades, estados, finalização nas duas modalidades, histórico, edição/arquivamento, recarga, dados inválidos e conflito entre abas. Também verificam UUIDs sem `randomUUID`, remoção da seleção completa e classificação de erros. Testes de navegador exercitam os fluxos em desktop e viewport móvel, incluindo os três temas, mudanças do sistema, preferências persistidas e histórico existente. O Playwright inicia um servidor Vite na porta 5174, separado da porta habitual de desenvolvimento.
 
-Validação desta atualização: 23 testes de domínio/validação/persistência aprovados; 14 cenários de navegador aprovados em localhost e os mesmos 14 aprovados por HTTP no endereço da rede local (28 execuções). Compilação TypeScript e build de produção aprovados. Capturas do histórico em tema escuro foram inspecionadas em desktop e viewport móvel. O build emite somente avisos de comentários de anotação da dependência Zod, sem impedir a compilação.
-
-Para repetir a validação HTTP no PowerShell, substitua o IP pelo endereço do computador:
-
-```powershell
-$env:E2E_BASE_URL = 'http://192.168.1.2:5174'
-npm run test:e2e
-Remove-Item Env:E2E_BASE_URL
-```
+Para testar por HTTP na rede local, defina a variável de ambiente `E2E_BASE_URL` com o endereço IP do computador que executa o Vite, usando a porta 5174, antes de executar `npm run test:e2e`. Remova a variável ao terminar para voltar aos testes em localhost.
 
 Esse cenário verifica explicitamente que o contexto não é seguro e que `randomUUID` está ausente. Os testes usam contextos isolados de navegador e não acessam nem apagam as compras do perfil pessoal.
 
