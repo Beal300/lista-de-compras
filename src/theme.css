@@ -1,0 +1,31 @@
+/* Shared tokens live in styles.css, keeping all surfaces in the same palette. */
+button { color: inherit; }
+.primary, .brand-icon, .in-cart .check { color: var(--on-accent); }
+dialog { background: var(--surface); }
+input::placeholder { color: var(--muted); opacity: 1; }
+progress::-moz-progress-bar { background: var(--accent); }
+.alert p, .alert small { color: var(--alert-text); }
+.header-controls { display: flex; align-items: center; gap: 20px; }
+.appearance { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.appearance label { color: var(--muted); font-size: 12px; }
+.appearance select { width: auto; min-width: 126px; }
+.appearance small { max-width: 250px; color: var(--alert-text); }
+.history-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.history-group { min-width: 0; padding: 16px; border: 1px solid var(--border); border-radius: 10px; }
+.history-group.in_cart { background: var(--cart-bg); border-top: 3px solid var(--accent); }
+.history-group.pending { background: var(--pending-bg); border-top: 3px solid var(--pending-accent); }
+.history-group h3 { margin: 0 0 14px; font-size: 15px; }
+.history-group.in_cart h3 { color: var(--accent); }
+.history-group.pending h3 { color: var(--pending-accent); }
+.history-group.pending .count { background: var(--surface); color: var(--pending-accent); }
+.history-empty { font-size: 13px; margin: 0; }
+.history-row > span:first-child { overflow-wrap: anywhere; }
+.history-row > span:last-child { white-space: nowrap; }
+@media (max-width: 760px) {
+  .topbar { flex-wrap: wrap; padding: 16px 0; }
+  .header-controls { width: 100%; justify-content: space-between; }
+  .header-controls .local-badge { font-size: 11px; }
+  .header-controls .local-badge::after { content: none; }
+  .history-groups { grid-template-columns: 1fr; }
+  .appearance { gap: 7px; }
+}

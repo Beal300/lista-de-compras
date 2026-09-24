@@ -1,0 +1,849 @@
+{
+  "categories": [
+    {
+      "id": "category-1",
+      "name": "Perecíveis",
+      "sortOrder": 0
+    },
+    {
+      "id": "category-2",
+      "name": "Não perecíveis",
+      "sortOrder": 1
+    },
+    {
+      "id": "category-3",
+      "name": "Limpeza/Higiene",
+      "sortOrder": 2
+    }
+  ],
+  "products": [
+    {
+      "id": "product-f05c3826e4fe49e873ae861f",
+      "categoryId": "category-1",
+      "name": "Peito de frango",
+      "unit": "unid",
+      "sortOrder": 0,
+      "initialQuantity": 6,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-6f2377c74c129c346d8105f0",
+      "categoryId": "category-2",
+      "name": "Óleo/Azeite",
+      "unit": "unid",
+      "sortOrder": 0,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-8256fb2aa3d6b0cd8be11cb4",
+      "categoryId": "category-3",
+      "name": "Amaciante",
+      "unit": "unid",
+      "sortOrder": 0,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-875996cd00447ba11b115ee9",
+      "categoryId": "category-1",
+      "name": "Carne moida patinho",
+      "unit": "unid",
+      "sortOrder": 1,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-4d1fbeb5cf75aff87187b2c3",
+      "categoryId": "category-2",
+      "name": "Tapioca",
+      "unit": "unid",
+      "sortOrder": 1,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-ffe843425c7b399c3cbbf030",
+      "categoryId": "category-3",
+      "name": "Sabão Liquido",
+      "unit": "unid",
+      "sortOrder": 1,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-25882391ad04ee77ba2add6a",
+      "categoryId": "category-1",
+      "name": "Linguiça de Frango",
+      "unit": "unid",
+      "sortOrder": 2,
+      "initialQuantity": 2,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-ed06b27a8c7fc917f6bf41b9",
+      "categoryId": "category-2",
+      "name": "Orégano",
+      "unit": "unid",
+      "sortOrder": 2,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-fd01df812f5168b403063565",
+      "categoryId": "category-3",
+      "name": "Alvejante",
+      "unit": "unid",
+      "sortOrder": 2,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-3e4c57316d9ada4286f17625",
+      "categoryId": "category-1",
+      "name": "Coxao mole bife",
+      "unit": "unid",
+      "sortOrder": 3,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-f1ee90637d513c9a987d890e",
+      "categoryId": "category-2",
+      "name": "Café",
+      "unit": "unid",
+      "sortOrder": 3,
+      "initialQuantity": 1,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-c61b5cf4e01431bee5168e6b",
+      "categoryId": "category-3",
+      "name": "Sabão lava louça",
+      "unit": "unid",
+      "sortOrder": 3,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-7930b5cac97f7429a99e8878",
+      "categoryId": "category-1",
+      "name": "Requeijão",
+      "unit": "unid",
+      "sortOrder": 4,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-a12ce4e88f65a64cd28eff08",
+      "categoryId": "category-2",
+      "name": "Filtro de Papel",
+      "unit": "unid",
+      "sortOrder": 4,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-44af83725dc83cdeb83b6702",
+      "categoryId": "category-3",
+      "name": "Líquido Secante",
+      "unit": "unid",
+      "sortOrder": 4,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-1d072af09ae0dbbc71dc20c5",
+      "categoryId": "category-1",
+      "name": "Tomate",
+      "unit": "unid",
+      "sortOrder": 5,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-ee7a1d4228ad9ca60e48a7ca",
+      "categoryId": "category-2",
+      "name": "Manteiga",
+      "unit": "unid",
+      "sortOrder": 5,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-224637ca140d26c40665b371",
+      "categoryId": "category-3",
+      "name": "Sabonete",
+      "unit": "unid",
+      "sortOrder": 5,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-0c2e9af74aea1e4fa5be841b",
+      "categoryId": "category-1",
+      "name": "Molho de tomate",
+      "unit": "unid",
+      "sortOrder": 6,
+      "initialQuantity": 4,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-fee8c425141fa9022e3d578e",
+      "categoryId": "category-2",
+      "name": "Louro",
+      "unit": "unid",
+      "sortOrder": 6,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-20260168b9005df3aacf5d8e",
+      "categoryId": "category-3",
+      "name": "Pasta de dente",
+      "unit": "unid",
+      "sortOrder": 6,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-b5510c448053710d4ec0b48d",
+      "categoryId": "category-1",
+      "name": "Leite",
+      "unit": "unid",
+      "sortOrder": 7,
+      "initialQuantity": 8,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-2623232a45fcdd7ff61f97bf",
+      "categoryId": "category-2",
+      "name": "Sal",
+      "unit": "unid",
+      "sortOrder": 7,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-b158f8cf9e1294c26637ad53",
+      "categoryId": "category-3",
+      "name": "Esponja Pia",
+      "unit": "unid",
+      "sortOrder": 7,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-a63f4845336b66d9bf595113",
+      "categoryId": "category-1",
+      "name": "Alface",
+      "unit": "unid",
+      "sortOrder": 8,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-3023955e23228ed5456236ad",
+      "categoryId": "category-2",
+      "name": "Nescau",
+      "unit": "unid",
+      "sortOrder": 8,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-b4ef6d4ac7632b15ab9d44ee",
+      "categoryId": "category-3",
+      "name": "Shampo/Condicionador",
+      "unit": "unid",
+      "sortOrder": 8,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-24fc4ea33955b12bbbd20516",
+      "categoryId": "category-1",
+      "name": "Cebola",
+      "unit": "unid",
+      "sortOrder": 9,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-215c7d165cc332b87558ca45",
+      "categoryId": "category-2",
+      "name": "Arroz 5 kg",
+      "unit": "unid",
+      "sortOrder": 9,
+      "initialQuantity": 1,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-850814b30fbb5ee631566601",
+      "categoryId": "category-3",
+      "name": "Desodorante",
+      "unit": "unid",
+      "sortOrder": 9,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-c01d1e9551c5aa6dac6ce73e",
+      "categoryId": "category-1",
+      "name": "Alho",
+      "unit": "unid",
+      "sortOrder": 10,
+      "initialQuantity": 3,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-b8ad0705dc279cc7a8ce56e5",
+      "categoryId": "category-2",
+      "name": "Leite Ninho",
+      "unit": "unid",
+      "sortOrder": 10,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-f90ea61ddb5e10724da16a20",
+      "categoryId": "category-3",
+      "name": "Detergente",
+      "unit": "unid",
+      "sortOrder": 10,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-fdf4cc03286c4dde7b33b89b",
+      "categoryId": "category-1",
+      "name": "Maçã",
+      "unit": "unid",
+      "sortOrder": 11,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-beb6aa0cd04f44d141ba7e7d",
+      "categoryId": "category-2",
+      "name": "Cappuccino",
+      "unit": "unid",
+      "sortOrder": 11,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-27629e4de02badb923e42a71",
+      "categoryId": "category-3",
+      "name": "Sabonete líquido mão",
+      "unit": "unid",
+      "sortOrder": 11,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-a86fbcf35aef05fa508140ba",
+      "categoryId": "category-1",
+      "name": "Banana",
+      "unit": "unid",
+      "sortOrder": 12,
+      "initialQuantity": 2,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-edd43d52d84ef0a5c67f3c37",
+      "categoryId": "category-2",
+      "name": "Pimenta do reino",
+      "unit": "unid",
+      "sortOrder": 12,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-638e82e24f29f419ae768dae",
+      "categoryId": "category-3",
+      "name": "Desinfetante / Limpeza",
+      "unit": "unid",
+      "sortOrder": 12,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-ee3669fc087126b3e4c19412",
+      "categoryId": "category-1",
+      "name": "Brócolis",
+      "unit": "unid",
+      "sortOrder": 13,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-07619dc323f7cbf09759d6e5",
+      "categoryId": "category-2",
+      "name": "Suco Integral",
+      "unit": "unid",
+      "sortOrder": 13,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-f5e43b39c6f83bb097965d62",
+      "categoryId": "category-3",
+      "name": "Papel Higiênico mili",
+      "unit": "unid",
+      "sortOrder": 13,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-0b480f92b512f40cf971f418",
+      "categoryId": "category-1",
+      "name": "Beterraba",
+      "unit": "unid",
+      "sortOrder": 14,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-787fdd9b1ef49fd68d520be7",
+      "categoryId": "category-2",
+      "name": "Batata Palha",
+      "unit": "unid",
+      "sortOrder": 14,
+      "initialQuantity": 2,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-a6ee4164f5d401c38e004de9",
+      "categoryId": "category-3",
+      "name": "Papel Toalha",
+      "unit": "unid",
+      "sortOrder": 14,
+      "initialQuantity": 1,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-fe5fe064d9514c9efec884de",
+      "categoryId": "category-1",
+      "name": "Cenoura",
+      "unit": "unid",
+      "sortOrder": 15,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-0bbf5a249b7ca72518b6e29a",
+      "categoryId": "category-2",
+      "name": "Chimichurri",
+      "unit": "unid",
+      "sortOrder": 15,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-d5b8c4911b22c74356237768",
+      "categoryId": "category-3",
+      "name": "Espuma de Barbear",
+      "unit": "unid",
+      "sortOrder": 15,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-6983427c6dc92faa44b864fa",
+      "categoryId": "category-1",
+      "name": "Couve flor",
+      "unit": "unid",
+      "sortOrder": 16,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-900ea44a91d2a8f8dc804c48",
+      "categoryId": "category-2",
+      "name": "Miojo",
+      "unit": "unid",
+      "sortOrder": 16,
+      "initialQuantity": 4,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-833c91ed5b094d8f000dac38",
+      "categoryId": "category-3",
+      "name": "Bon air/pato privada",
+      "unit": "unid",
+      "sortOrder": 16,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-4aacb550593aa89601ca6613",
+      "categoryId": "category-1",
+      "name": "Melão",
+      "unit": "unid",
+      "sortOrder": 17,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-728dcc1271e4983ff4afa457",
+      "categoryId": "category-2",
+      "name": "Macarrão",
+      "unit": "unid",
+      "sortOrder": 17,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-ebda2f316c9f5324ac0f6948",
+      "categoryId": "category-3",
+      "name": "Álcool",
+      "unit": "unid",
+      "sortOrder": 17,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-828f41197a4d1c3775ce93e9",
+      "categoryId": "category-1",
+      "name": "Pão de forma",
+      "unit": "unid",
+      "sortOrder": 18,
+      "initialQuantity": 1,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-d66e64a8538c4d7c1040c5a1",
+      "categoryId": "category-2",
+      "name": "Feijão",
+      "unit": "unid",
+      "sortOrder": 18,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-b9f5ddc39de9ff613b6ee896",
+      "categoryId": "category-3",
+      "name": "Super Cola",
+      "unit": "unid",
+      "sortOrder": 18,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-44127820ca512af6f96ce0e9",
+      "categoryId": "category-1",
+      "name": "Limão",
+      "unit": "unid",
+      "sortOrder": 19,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-3c058f43d1241e0beb4f7641",
+      "categoryId": "category-2",
+      "name": "Sazon pipoca",
+      "unit": "unid",
+      "sortOrder": 19,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-683cad2aad1f1559da038c1f",
+      "categoryId": "category-3",
+      "name": "Sabão em pedra",
+      "unit": "unid",
+      "sortOrder": 19,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-9ad6f401a6c507ed951500f6",
+      "categoryId": "category-1",
+      "name": "Muçarela",
+      "unit": "unid",
+      "sortOrder": 20,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-6fc4299ce36a638285bc0679",
+      "categoryId": "category-2",
+      "name": "Aveia",
+      "unit": "unid",
+      "sortOrder": 20,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-205cc3b7a5909e48d6c06e83",
+      "categoryId": "category-3",
+      "name": "Cheirinho Coala Rosa/Azul/Roxo",
+      "unit": "unid",
+      "sortOrder": 20,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-7c026f6d1b3f323afa6f7aed",
+      "categoryId": "category-1",
+      "name": "Ovos",
+      "unit": "unid",
+      "sortOrder": 21,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-ea81c21cbf392305260c3a04",
+      "categoryId": "category-2",
+      "name": "Páprica picante",
+      "unit": "unid",
+      "sortOrder": 21,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-897467767a288437732cb31a",
+      "categoryId": "category-3",
+      "name": "Repelente",
+      "unit": "unid",
+      "sortOrder": 21,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-695551660e49f4cc26ebf858",
+      "categoryId": "category-1",
+      "name": "Pão de queijo",
+      "unit": "unid",
+      "sortOrder": 22,
+      "initialQuantity": 2,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-409cae9fbce8c6b640f3df7c",
+      "categoryId": "category-2",
+      "name": "Lemon Pepper",
+      "unit": "unid",
+      "sortOrder": 22,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-a82150bdbbc3e4d50f3c17cb",
+      "categoryId": "category-3",
+      "name": "CIF",
+      "unit": "unid",
+      "sortOrder": 22,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-5e1b8a964ebb6126e61a70f7",
+      "categoryId": "category-1",
+      "name": "Batata",
+      "unit": "unid",
+      "sortOrder": 23,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-9593fa60bd94de74ed9f4119",
+      "categoryId": "category-2",
+      "name": "Doce de leite",
+      "unit": "unid",
+      "sortOrder": 23,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-73a9bc952e820901aaf691c2",
+      "categoryId": "category-3",
+      "name": "Saco de lixo",
+      "unit": "unid",
+      "sortOrder": 23,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-544c11ad52584812bf675d8c",
+      "categoryId": "category-1",
+      "name": "Ricota",
+      "unit": "unid",
+      "sortOrder": 24,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-74b60954ac51552bfbf51e4d",
+      "categoryId": "category-2",
+      "name": "Bicarbonato",
+      "unit": "unid",
+      "sortOrder": 24,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-171b937a019dcd8574c2d6dd",
+      "categoryId": "category-3",
+      "name": "Guardanapo",
+      "unit": "unid",
+      "sortOrder": 24,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-c53aa95adade9378bee68a31",
+      "categoryId": "category-1",
+      "name": "Tekitos",
+      "unit": "unid",
+      "sortOrder": 25,
+      "initialQuantity": 4,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-a1785610b77305ab5da7b2e7",
+      "categoryId": "category-2",
+      "name": "Chocolate",
+      "unit": "unid",
+      "sortOrder": 25,
+      "initialQuantity": 1,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-f60b5112f98eaa11838d0533",
+      "categoryId": "category-3",
+      "name": "Tira pêlos",
+      "unit": "unid",
+      "sortOrder": 25,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-8f8cdd5e7adef76fbc4dd998",
+      "categoryId": "category-1",
+      "name": "Amido de milho",
+      "unit": "unid",
+      "sortOrder": 26,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-ffe254cd4e229c2ba9a972d1",
+      "categoryId": "category-2",
+      "name": "Oleo mineral",
+      "unit": "unid",
+      "sortOrder": 26,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-9066ccad051e228b602c5d9e",
+      "categoryId": "category-3",
+      "name": "Sabão em pó",
+      "unit": "unid",
+      "sortOrder": 26,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-4b3f89abaf3e5ff31be4de03",
+      "categoryId": "category-1",
+      "name": "Leite Condensado",
+      "unit": "unid",
+      "sortOrder": 27,
+      "initialQuantity": 1,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-7d431a211f8a86523143e903",
+      "categoryId": "category-2",
+      "name": "Chá",
+      "unit": "unid",
+      "sortOrder": 27,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-21f1d440cbbaccf998f82b3b",
+      "categoryId": "category-3",
+      "name": "Enxaguante bucal",
+      "unit": "unid",
+      "sortOrder": 27,
+      "initialQuantity": 1,
+      "initialStatus": "in_cart"
+    },
+    {
+      "id": "product-3e5f0b364f94383f803462d9",
+      "categoryId": "category-1",
+      "name": "Bolacha maizena",
+      "unit": "unid",
+      "sortOrder": 28,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-1e725c9237af2907886b843b",
+      "categoryId": "category-2",
+      "name": "Vinagre",
+      "unit": "unid",
+      "sortOrder": 28,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-c7f3b97849b3b9471d6815bf",
+      "categoryId": "category-1",
+      "name": "Creme de Leite",
+      "unit": "unid",
+      "sortOrder": 29,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-cca0d4b7f6031b8c3a6cf681",
+      "categoryId": "category-2",
+      "name": "Chocolate em pó",
+      "unit": "unid",
+      "sortOrder": 29,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-cf11d978e93d2c32c5c93704",
+      "categoryId": "category-1",
+      "name": "Iogurte",
+      "unit": "unid",
+      "sortOrder": 30,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-ce7e55ecb4409b3401bd55eb",
+      "categoryId": "category-2",
+      "name": "Pipoca",
+      "unit": "unid",
+      "sortOrder": 30,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-e959e40553a2ac50913ec89a",
+      "categoryId": "category-1",
+      "name": "Milho",
+      "unit": "unid",
+      "sortOrder": 31,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    },
+    {
+      "id": "product-f4c8d62305217a23580cbacd",
+      "categoryId": "category-2",
+      "name": "Farofa",
+      "unit": "unid",
+      "sortOrder": 31,
+      "initialQuantity": 0,
+      "initialStatus": "pending"
+    }
+  ]
+}
