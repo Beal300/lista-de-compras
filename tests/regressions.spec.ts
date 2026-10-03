@@ -41,20 +41,19 @@ test('revisão espelha a lista, preserva carrinho e remove inclusive a última s
   await expect(page.locator('.shopping-row')).toHaveCount(0);
 });
 
-test('aparência clara, escura e automática acompanha sistema e persiste sem alterar compras', async ({ page, app }, testInfo) => {
+test('tema inicial do sistema e alternância persistida preservam as compras', async ({ page, app }, testInfo) => {
   await page.emulateMedia({ colorScheme: 'dark' }); await login(page, app, true);
-  const appearance = page.getByRole('combobox', { name: 'Aparência' });
-  await expect(appearance).toHaveValue('auto'); await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
-  const saved = await snapshot(page, app);
-  await appearance.selectOption('light'); await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
-  await page.reload(); await expect(appearance).toHaveValue('light'); await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
-  await appearance.selectOption('dark'); await page.emulateMedia({ colorScheme: 'light' });
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
-  await page.reload(); await expect(appearance).toHaveValue('dark'); await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await expect(page.locator('.appearance button')).toHaveCount(1);
+  const saved = await snapshot(page, app);
+  await page.getByRole('button', { name: 'Ativar tema claro' }).click();
+  await page.reload(); await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
+  await page.screenshot({ path: testInfo.outputPath('tema-claro.png'), fullPage: true });
+  await page.getByRole('button', { name: 'Ativar tema escuro' }).click();
+  await page.emulateMedia({ colorScheme: 'light' });
+  await page.reload(); await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await expect(page.getByRole('button', { name: 'Ativar tema claro' })).toBeVisible();
   await page.screenshot({ path: testInfo.outputPath('tema-escuro.png'), fullPage: true });
-  await appearance.selectOption('auto'); await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
-  await page.emulateMedia({ colorScheme: 'dark' }); await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
-  await page.reload(); await expect(appearance).toHaveValue('auto'); await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   expect(await snapshot(page, app)).toEqual(saved);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
@@ -64,7 +63,7 @@ test('histórico existente é agrupado sem regravar ou alterar dados', async ({ 
   await page.getByRole('button', { name: 'Marcar pendente: Peito de frango', exact: true }).click();
   await page.getByRole('button', { name: 'Finalizar compra' }).click();
   await page.getByRole('button', { name: 'Manter os produtos pendentes' }).click();
-  await page.getByRole('combobox', { name: 'Aparência' }).selectOption('dark');
+  await page.getByRole('button', { name: 'Ativar tema escuro', exact: true }).click();
   const raw = await snapshot(page, app);
   await page.reload(); await page.getByRole('button', { name: 'Histórico', exact: true }).click();
   await page.locator('summary').click();

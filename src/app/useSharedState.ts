@@ -14,7 +14,7 @@ export function useSharedState() {
   const [uncertain, setUncertain] = useState(false);
   const pending = useRef<Command | null>(null); const writing = useRef(false); const reading = useRef(false); const failures = useRef(0);
   const apply = useCallback((next: AppState) => {
-    if (!current.current || next.workspaceId !== current.current.workspaceId || next.revision >= current.current.revision) {
+    if (!current.current || next.workspaceId !== current.current.workspaceId || next.revision > current.current.revision) {
       current.current = next; setState(next);
     }
   }, []);

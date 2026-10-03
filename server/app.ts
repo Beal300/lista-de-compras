@@ -1,3 +1,5 @@
+import { DuplicateProductError } from '../src/domain/products';
+import { fetchReceipt, ReceiptError } from './nfce';
 import express from 'express';
 import helmet from 'helmet';
 import { rateLimit } from 'express-rate-limit';
@@ -52,6 +54,12 @@ export function createApp(store: Store, options: ServerOptions) {
     if (req.get('if-none-match') === etag) { res.status(304).end(); return; }
     res.json(state);
   });
+  app.post('/api/receipts/preview', rateLimit({ windowMs: 60000, limit: 10, message: { code: 'RATE_LIMIT', message: 'Muitas consultas de NFC-e. Aguarde um minuto e tente novamente.' } }), async (req, res) => {
+    const input = z.object({ purchaseId: z.string().min(1).max(128), url: z.string().max(4096) }).strict().parse(req.body);
+    if (!store.read().lists.some(l => l.id === input.purchaseId && l.status === 'completed')) throw new OperationError(422, 'INVALID_PURCHASE', 'Compra não encontrada no histórico.');
+    const receipt = await fetchReceipt(input.url);
+    res.setHeader('Cache-Control', 'no-store'); res.json(store.preview(input.purchaseId, receipt));
+  });
   app.post('/api/commands', (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
     res.json(store.execute(commandSchema.parse(req.body)));
@@ -64,6 +72,8 @@ export function createApp(store: Store, options: ServerOptions) {
   app.use((_req, res) => res.status(404).end());
   app.use((error: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
     if (error instanceof z.ZodError) { res.status(422).json({ code: 'VALIDATION', message: 'Dados inválidos. Confira nome, categoria e quantidades inteiras entre 1 e 9999.' }); return; }
+    if (error instanceof DuplicateProductError) { res.status(409).json({ code: 'DUPLICATE_PRODUCT', message: error.message }); return; }
+    if (error instanceof ReceiptError) { res.status(error.status).json({ code: error.code, message: error.message }); return; }
     if (error instanceof OperationError) { res.status(error.status).json({ code: error.code, message: error.message }); return; }
     const status = (error as { status?: number })?.status;
     if (status === 400 || status === 413) { res.status(status).json({ code: 'INVALID_BODY', message: 'Requisição inválida ou muito grande.' }); return; }

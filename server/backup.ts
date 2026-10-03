@@ -7,7 +7,7 @@ import { stateSchema } from '../src/domain/models';
 export function validateBackup(filename: string) {
   const db = new Database(filename, { readonly: true, fileMustExist: true });
   try {
-    if (db.pragma('integrity_check', { simple: true }) !== 'ok' || db.pragma('user_version', { simple: true }) !== 1) throw new Error('Backup inválido ou incompatível.');
+    if (db.pragma('integrity_check', { simple: true }) !== 'ok' || ![1, 2].includes(db.pragma('user_version', { simple: true }) as number)) throw new Error('Backup inválido ou incompatível.');
     const row = db.prepare('SELECT revision, payload FROM app_state WHERE id=1').get() as { revision: number; payload: string };
     const state = stateSchema.parse(JSON.parse(row.payload));
     if (state.revision !== row.revision) throw new Error('Revisão do backup inconsistente.');
